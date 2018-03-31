@@ -1,0 +1,35 @@
+* {
+    outline: 1px solid red;
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+}
+
+#game-container {
+    width: 800px;
+    height: 800px;
+    margin: 15px auto;
+}
+
+#userview {
+    width: 800px;
+    height: 400px;
+}
+
+#userview h2 {
+    text-align: center;
+    font-size: 25px;
+
+}
+
+#lettersguessed {
+    width: 800px;
+    height: 400px;
+}
+
+#lettersguessed h2 {
+    text-align: center;
+    font-size: 35px;
+}
