@@ -7,29 +7,49 @@ h1 {
     font-size: 70px;
 }
 
+h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
 #game-container {
     width: 800px;
     height: 800px;
     margin: 15px auto;
 }
 
-#userview {
-    width: 800px;
-    height: 400px;
-}
-
-#userview h2 {
+.underscores {
+    margin: 25px auto;
     text-align: center;
     font-size: 25px;
-
+    height: 150px;
+    box-sizing: border-box;
+    padding: 40px 30px;
+    letter-spacing: 15px;
 }
 
-#lettersguessed {
-    width: 800px;
-    height: 400px;
-}
-
-#lettersguessed h2 {
+.totalGuess {
+    margin: 25px auto;
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 40px 30px;
+}
+
+#totalGuessed {
+    margin-top: 15px;
+}
+
+.lettersGuessed {
+    margin: 25px auto;
+    text-align: center;
+    font-size: 25px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 40px 30px;
+}
+
+#guessedLetters {
+    margin-top: 15px
 }

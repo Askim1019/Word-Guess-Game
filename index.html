@@ -12,17 +12,21 @@
 <body>
     <header>
         <h1>HANGMAN</h1>
+        <h2>Press any key to start the game!</h2>
     </header>
 
     <div id="game-container">
-        <div id="userview">
-            <h2>Press any key to start the game!</h2>
-            <p class="correctGuesses"></p>
+        <div class="underscores">_ _ _ _ _ _ _ _ </div>
+
+        <div class="totalGuess">
+            Total Guesses Remaining:
+            <div id="totalGuessed"> 10</div>
         </div>
 
-        <div id="lettersguessed">
-            <h2>Letters Guessed</h2>
-        </div>
+        <section class="lettersGuessed">
+            Letters Guessed:
+            <div id="guessedLetters">p,l,a,c,e,h,o,l,d,e,r</div>
+        </section>
     </div>
 
 
