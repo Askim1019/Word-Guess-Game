@@ -5,17 +5,25 @@
 h1 {
     text-align: center;
     font-size: 70px;
+    background-color: blue;
 }
 
 h2 {
     font-size: 35px;
     text-align: center;
+    margin-top: 25px;
 }
 
 #game-container {
     width: 800px;
-    height: 800px;
+    height: 1000px;
     margin: 15px auto;
+}
+
+#picture {
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
 }
 
 .underscores {
@@ -45,11 +53,11 @@ h2 {
     margin: 25px auto;
     text-align: center;
     font-size: 25px;
-    height: 150px;
+    height: 250px;
     box-sizing: border-box;
     padding: 40px 30px;
 }
 
-#guessedLetters {
-    margin-top: 15px
+#wrongLetters {
+    margin-top: 50px;
 }

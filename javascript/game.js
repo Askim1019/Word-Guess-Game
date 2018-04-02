@@ -13,32 +13,63 @@
 
 // If user uses guesses whole world, display "You Win"
 
-// Create our word bank or array
-var word = ['vi', 'malphite', 'ekko', 'darius', 'garen', 'ezreal',
-            'leesin', 'khazix', 'rengar', 'karma', 'ashe', 'leona',
-            'lux', 'ahri', 'vayne', 'lucian', 'nocturne', 'renekton',
-            'nasus', 'janna', 'soraka', 'sona', 'draven', 'sivir',
-            'xayah', 'taliyah', 'tryndamere', 'illaoi', 'gragas',
-            'gangplank'];
 
-// Create a variable to get the random index number to choose our word
-var indexOfWord= Math.floor(Math.random() * word.length);
 
-// Get the word from array by using the ranodm function above
-var chooseWord = word[indexOfWord];
 
-// Test to see if word is being chosen and how long the character is
-console.log(chooseWord);
-console.log(chooseWord.length);
+function newGame() {
+    // Create our word bank or array
+    var word = ['vi', 'malphite', 'ekko', 'darius', 'garen', 'ezreal',
+                'leesin', 'khazix', 'rengar', 'karma', 'ashe', 'leona',
+                'lux', 'ahri', 'vayne', 'lucian', 'nocturne', 'renekton',
+                'nasus', 'janna', 'soraka', 'sona', 'draven', 'sivir',
+                'xayah', 'taliyah', 'tryndamere', 'illaoi', 'gragas',
+                'gangplank'];
 
-var underscores = [];
+    // Create empty arrays to push to.
+    var underscores = [];
+    var correctLetters = [];
+    var wrongLetters = [];
 
-var makeUnderscore = function () {
-    for (var i = 0; i < chooseWord.length; i++) {
-        underscores.push('_');
+    // Create a variable to get the random index number to choose our word
+    var indexOfWord= Math.floor(Math.random() * word.length);
+
+    // Get the word from array by using the ranodm function above
+    var chooseWord = word[indexOfWord];
+
+
+    // Create a function that makes undescores for length of the word
+    var makeUnderscore = function () {
+        for (var i = 0; i < chooseWord.length; i++) {
+            underscores.push('_');
+        }
+
+        return underscores;
+    };
+
+    // Test to see if word is being chosen and how long the character is
+    console.log(chooseWord);
+    console.log(chooseWord.length);
+    console.log(makeUnderscore());
+
+
+
+    document.onkeyup =  function(event) {
+        var userLetter = event.key; // letter that is pressed
+        var letterIndex = chooseWord.indexOf(userLetter);
+        console.log(letterIndex);
+        console.log(userLetter);
+
+        if (letterIndex !== -1 && correctLetters.includes(userLetter) === false) {
+            correctLetters.push(userLetter);
+            console.log(correctLetters);
+        }
+        else if (letterIndex === -1 && wrongLetters.includes(userLetter) === false){
+            wrongLetters.push(userLetter);
+            console.log(wrongLetters);
+        }
+        //if user letter is in the word selected from array
+
     }
+}
 
-    return underscores;
-};
-
-console.log(makeUnderscore());
+newGame();
