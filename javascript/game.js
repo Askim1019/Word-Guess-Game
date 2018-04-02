@@ -16,9 +16,9 @@
 
 
 
-function newGame() {
+
     // Create our word bank or array
-    var word = ['vi', 'malphite', 'ekko', 'darius', 'garen', 'ezreal',
+    var wordList = ['vi', 'malphite', 'ekko', 'darius', 'garen', 'ezreal',
                 'leesin', 'khazix', 'rengar', 'karma', 'ashe', 'leona',
                 'lux', 'ahri', 'vayne', 'lucian', 'nocturne', 'renekton',
                 'nasus', 'janna', 'soraka', 'sona', 'draven', 'sivir',
@@ -29,17 +29,20 @@ function newGame() {
     var underscores = [];
     var correctLetters = [];
     var wrongLetters = [];
+    var guessesRemaining = 10;
 
+
+
+function newGame() {
     // Create a variable to get the random index number to choose our word
-    var indexOfWord= Math.floor(Math.random() * word.length);
+    var indexOfWord= Math.floor(Math.random() * wordList.length);
 
     // Get the word from array by using the ranodm function above
-    var chooseWord = word[indexOfWord];
-
+    var word = wordList[indexOfWord];
 
     // Create a function that makes undescores for length of the word
     var makeUnderscore = function () {
-        for (var i = 0; i < chooseWord.length; i++) {
+        for (var i = 0; i < word.length; i++) {
             underscores.push('_');
         }
 
@@ -47,15 +50,13 @@ function newGame() {
     };
 
     // Test to see if word is being chosen and how long the character is
-    console.log(chooseWord);
-    console.log(chooseWord.length);
+    console.log(word);
+    console.log(word.length);
     console.log(makeUnderscore());
-
-
 
     document.onkeyup =  function(event) {
         var userLetter = event.key; // letter that is pressed
-        var letterIndex = chooseWord.indexOf(userLetter);
+        var letterIndex = word.indexOf(userLetter);
         console.log(letterIndex);
         console.log(userLetter);
 
