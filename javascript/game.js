@@ -13,23 +13,19 @@
 
 // If user uses guesses whole world, display "You Win"
 
+// Create our word bank or array
+var wordList = ['vi', 'malphite', 'ekko', 'darius', 'garen', 'ezreal',
+            'leesin', 'khazix', 'rengar', 'karma', 'ashe', 'leona',
+            'lux', 'ahri', 'vayne', 'lucian', 'nocturne', 'renekton',
+            'nasus', 'janna', 'soraka', 'sona', 'draven', 'sivir',
+            'xayah', 'taliyah', 'tryndamere', 'illaoi', 'gragas',
+            'gangplank'];
 
-
-
-
-    // Create our word bank or array
-    var wordList = ['vi', 'malphite', 'ekko', 'darius', 'garen', 'ezreal',
-                'leesin', 'khazix', 'rengar', 'karma', 'ashe', 'leona',
-                'lux', 'ahri', 'vayne', 'lucian', 'nocturne', 'renekton',
-                'nasus', 'janna', 'soraka', 'sona', 'draven', 'sivir',
-                'xayah', 'taliyah', 'tryndamere', 'illaoi', 'gragas',
-                'gangplank'];
-
-    // Create empty arrays to push to.
-    var underscores = [];
-    var correctLetters = [];
-    var wrongLetters = [];
-    var guessesRemaining = 10;
+// Create empty arrays to push to.
+var underscores = [];
+var correctLetters = [];
+var wrongLetters = [];
+var guessesRemaining = 10;
 
 
 
@@ -69,8 +65,13 @@ function newGame() {
             console.log(wrongLetters);
         }
         //if user letter is in the word selected from array
-
+       
+        document.getElementById("guessesRemaining").textContent = guessesRemaining;
+        document.getElementById("wrongLetters").textContent = wrongLetters;
+        
     }
+
+
 }
 
 newGame();
