@@ -36,10 +36,19 @@ function newGame() {
     console.log(word);
     console.log(word.length);
 
+
     function letterLogic(userLetter, letterIndex) {
         for (var j = 0; j < word.length; j++) {
             if (word[j] === userLetter) {
                 underscores[j] = word[j];
+            }
+            else if (word === underscores.join("")) {
+                document.getElementById("instruction").innerHTML = "YOU WIN!";
+                break;
+            }
+            else if (guessesRemaining === 0) {
+                document.getElementById("instruction").innerHTML = "YOU LOSE!";
+                break;
             }
             else if (letterIndex === -1 && wrongLetters.includes(userLetter) === false) {
                 wrongLetters.push(userLetter);
@@ -58,10 +67,8 @@ function newGame() {
             //loop through length of word and replace the underscore with a correct letter
             //If no correct letter then, add to letters incorrect array to render to page.
             letterLogic(userLetter, letterIndex);
-
-            
         
-        
+            // The DOM renders our logic to the page
             document.getElementById("guessesRemaining").textContent = guessesRemaining;
             document.getElementById("wrongLetters").textContent = wrongLetters.join(" ");
             document.getElementById("underscores").textContent = underscores.join("");

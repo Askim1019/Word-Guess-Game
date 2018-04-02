@@ -2,16 +2,20 @@
     outline: 1px solid red;
 } */
 
+body {
+    background-color: green;
+}
+
 h1 {
     text-align: center;
     font-size: 70px;
     background-color: blue;
+    padding: 20px 20px;
 }
 
 h2 {
     font-size: 35px;
     text-align: center;
-    margin-top: 25px;
 }
 
 #game-container {
@@ -43,7 +47,7 @@ h2 {
     font-size: 35px;
     height: 150px;
     box-sizing: border-box;
-    padding: 40px 30px;
+    padding: 20px 20px;
 }
 
 #guessesRemaining {
@@ -52,12 +56,12 @@ h2 {
 
 .lettersGuessed {
     border: 1px solid black;
-    margin: 35px auto;
+    margin: 15px auto;
     text-align: center;
     font-size: 35px;
     height: 250px;
     box-sizing: border-box;
-    padding: 40px 30px;
+    padding: 20px 20px;
 }
 
 #wrongLetters {
