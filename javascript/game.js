@@ -44,7 +44,6 @@ function newGame() {
             }
             else if (word === underscores.join("")) {
                 document.getElementById("instruction").innerHTML = "YOU WIN!";
-                break;
             }
             else if (guessesRemaining === 0) {
                 document.getElementById("instruction").innerHTML = "YOU LOSE!";
@@ -67,7 +66,7 @@ function newGame() {
             //loop through length of word and replace the underscore with a correct letter
             //If no correct letter then, add to letters incorrect array to render to page.
             letterLogic(userLetter, letterIndex);
-        
+            
             // The DOM renders our logic to the page
             document.getElementById("guessesRemaining").textContent = guessesRemaining;
             document.getElementById("wrongLetters").textContent = wrongLetters.join(" ");
