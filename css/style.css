@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: 1px solid red;
-}
+} */
 
 h1 {
     text-align: center;
@@ -29,17 +29,18 @@ h2 {
 #underscores {
     margin: 25px auto;
     text-align: center;
-    font-size: 25px;
-    height: 150px;
+    font-size: 50px;
+    height: 100px;
     box-sizing: border-box;
-    padding: 40px 30px;
+    padding: 10px 10px;
     letter-spacing: 15px;
 }
 
 .totalGuess {
+    border: 1px solid black;
     margin: 25px auto;
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
     height: 150px;
     box-sizing: border-box;
     padding: 40px 30px;
@@ -50,9 +51,10 @@ h2 {
 }
 
 .lettersGuessed {
-    margin: 25px auto;
+    border: 1px solid black;
+    margin: 35px auto;
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
     height: 250px;
     box-sizing: border-box;
     padding: 40px 30px;
