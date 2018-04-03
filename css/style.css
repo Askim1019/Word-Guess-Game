@@ -22,6 +22,17 @@ h2 {
     font-size: 35px;
 }
 
+button {
+    background-color: yellow;
+    margin-top: 15px;
+    font-size: 20px;
+    box-shadow: 3px 3px #888888;
+}
+
+button:active {
+    margin-top: 16px;
+    box-shadow: 2px 2px #888888;
+}
 
 
 #game-container {
