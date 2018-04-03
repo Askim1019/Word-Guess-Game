@@ -8,7 +8,7 @@ var underscores = [];
 var correctLetters = [];
 var wrongLetters = [];
 var guessesRemaining = 10;
-stateOfGame = false;
+var stateOfGame = false;
 
 // start a new game
 function startGame() {
@@ -36,6 +36,8 @@ function startGame() {
     };
 
     makeUnderscore();
+    document.getElementById("underscores").textContent = underscores.join("");
+
 
     // If the letter is in the word, display it and replace it with the undescore
     function correctGuess(userLetter) {
@@ -59,7 +61,7 @@ function startGame() {
     }
 
     // Type win game and show a picture if you guess all the right letters
-     function winGame() {
+    function winGame() {
         if (underscores.join("") === word) {
             document.getElementById("instruction").innerHTML = "You WIN!";
             document.getElementById("picture").innerHTML = '<img src="https://mir-s3-cdn-cf.behance.net/projects/202/cc5ba853065555.Y3JvcCw2MzQsNDk2LDYyOSwxNjI.png">';
@@ -78,7 +80,7 @@ function startGame() {
     }
 
     //This is the main key event that renders our guesses
-    
+
     document.onkeyup =  function(event) {
         if (event.keyCode >= 65 && event.keyCode <= 90 && stateOfGame === true) {
             var userLetter = event.key.toLowerCase(); // letter that is pressed
@@ -92,9 +94,13 @@ function startGame() {
             wrongGuess(userLetter, letterIndex);
             winGame();
             loseGame();
-           
+            
         }
     }
 }
 
-document.getElementById("btn").addEventListener("click", startGame());
+
+startGame();
+if (stateOfGame === false) {
+    document.getElementById("btn").onclick = window.location.reload();
+};
