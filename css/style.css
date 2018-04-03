@@ -47,6 +47,11 @@ button:active {
     margin: 10px auto;
 }
 
+#picture img {
+    width: 200px;
+    height: 200px;
+}
+
 #underscores {
     margin: 25px auto;
     text-align: center;

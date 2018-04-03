@@ -62,6 +62,7 @@ function startGame() {
      function winGame() {
         if (underscores.join("") === word) {
             document.getElementById("instruction").innerHTML = "You WIN!";
+            document.getElementById("picture").innerHTML = '<img src="https://mir-s3-cdn-cf.behance.net/projects/202/cc5ba853065555.Y3JvcCw2MzQsNDk2LDYyOSwxNjI.png">';
             stateOfGame = false;
         }
         
@@ -71,6 +72,7 @@ function startGame() {
     function loseGame() {
         if (guessesRemaining === 0) {
             document.getElementById("instruction").innerHTML = "You LOSE!";
+            document.getElementById("picture").innerHTML = '<img src="https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/thumbor/yPuUSNL1lDDBToZibYH-IsqUQfc=/1200x0/filters:no_upscale()/https://do8lg3dthpu1x.cloudfront.net/article/bd02e9a4-7c09-4a41-aba3-cc17080e5e3f.jpg">';
             stateOfGame = false;
         }  
     }
