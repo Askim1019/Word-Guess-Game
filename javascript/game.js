@@ -2,6 +2,16 @@
 var wordList = ['malphite', 'ekko', 'darius', 'garen', 'ezreal',
             'leesin', 'khazix', 'rengar','gangplank', 'ziggs'];
 
+       /*      var characters = [
+                {
+                    name: "malphite",
+                    url: "../images/malphite.png"
+                },
+                {
+                    name: "ekko",
+                    url: "src"
+                }
+            ]; */
 
 // Create empty arrays to push to.
 var underscores = [];
@@ -65,6 +75,9 @@ function startGame() {
         if (underscores.join("") === word) {
             document.getElementById("instruction").innerHTML = "You WIN!";
             document.getElementById("picture").innerHTML = '<img src="https://mir-s3-cdn-cf.behance.net/projects/202/cc5ba853065555.Y3JvcCw2MzQsNDk2LDYyOSwxNjI.png">';
+            
+            // innerHTML = "<img src=\"" + characters[i].url + "\" />";
+            
             stateOfGame = false;
         }
         
