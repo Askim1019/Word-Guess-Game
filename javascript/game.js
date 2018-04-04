@@ -19,7 +19,7 @@ function startGame() {
     guessesRemaining = 10;
     stateOfGame = true;
 
-    document.getElementById("instruction").innerHTML = "Guess a letter. You get 10 tries";
+    document.getElementById("instruction").innerHTML = "Guess a letter!";
     // Create a variable to get the random index number to choose our word
     var indexOfWord= Math.floor(Math.random() * wordList.length);
 
@@ -100,7 +100,11 @@ function startGame() {
 }
 
 
-startGame();
-if (stateOfGame === false) {
-    document.getElementById("btn").onclick = window.location.reload();
-};
+
+$('#btn').on("click", function(){
+    $('#guessesRemaining').empty();
+    $('#wrongLetters').empty();
+    $('#picture').empty();
+    startGame();
+
+});
