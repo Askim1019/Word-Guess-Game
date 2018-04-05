@@ -1,17 +1,49 @@
 // Create our word bank or array
-var wordList = ['malphite', 'ekko', 'darius', 'garen', 'ezreal',
-            'leesin', 'khazix', 'rengar','gangplank', 'ziggs'];
+// var wordList = ['malphite', 'ekko', 'darius', 'garen', 'ezreal',
+//             'leesin', 'khazix', 'rengar','gangplank', 'ziggs'];
 
-       /*      var characters = [
-                {
-                    name: "malphite",
-                    url: "../images/malphite.png"
-                },
-                {
-                    name: "ekko",
-                    url: "src"
-                }
-            ]; */
+var characters = [
+    {
+        name: "malphite",
+        url: "./images/malphite.jpg"
+    },
+    {
+        name: "ekko",
+        url: "./images/ekko.jpeg"
+    },
+    {
+        name: "darius",
+        url: "./images/darius.jpeg"
+    },
+    {
+        name: "garen",
+        url: "./images/garen.jpeg"
+    },
+    {
+        name: "ezreal",
+        url: "./images/ezreal.jpeg"
+    },
+    {
+        name: "leesin",
+        url: "./images/leesin.jpeg"
+    },
+    {
+        name: "khazix",
+        url: "./images/khazix.jpeg"
+    },
+    {
+        name: "rengar",
+        url: "./images/rengar.jpeg"
+    },
+    {
+        name: "gangplank",
+        url: "./images/gangplank.jpeg"
+    },
+    {
+        name: "ziggs",
+        url: "./images/ziggs.jpeg"
+    }
+]; 
 
 // Create empty arrays to push to.
 var underscores = [];
@@ -31,11 +63,14 @@ function startGame() {
 
     document.getElementById("instruction").innerHTML = "Guess a letter!";
     // Create a variable to get the random index number to choose our word
-    var indexOfWord= Math.floor(Math.random() * wordList.length);
+    // var indexOfWord= Math.floor(Math.random() * wordList.length);
+    var indexOfWord = Math.floor(Math.random() * characters.length)
 
     // Get the word from array by using the ranodm function above
-    var word = wordList[indexOfWord];
-
+    // var word = wordList[indexOfWord];
+    var chosenObject = characters[indexOfWord];
+    var word = chosenObject.name;
+    console.log(word);
     // Create a function that makes the number of underscores match the length of the word chosen
     var makeUnderscore = function () {
         for (var i = 0; i < word.length; i++) {
@@ -74,9 +109,8 @@ function startGame() {
     function winGame() {
         if (underscores.join("") === word) {
             document.getElementById("instruction").innerHTML = "You WIN!";
-            document.getElementById("picture").innerHTML = '<img src="https://mir-s3-cdn-cf.behance.net/projects/202/cc5ba853065555.Y3JvcCw2MzQsNDk2LDYyOSwxNjI.png">';
-            
-            // innerHTML = "<img src=\"" + characters[i].url + "\" />";
+            // document.getElementById("picture").innerHTML = '<img src="https://mir-s3-cdn-cf.behance.net/projects/202/cc5ba853065555.Y3JvcCw2MzQsNDk2LDYyOSwxNjI.png">';
+            console.log(document.getElementById("picture").innerHTML = `<img src="${chosenObject.url}"/>`);            
             
             stateOfGame = false;
         }
