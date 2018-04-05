@@ -13,9 +13,18 @@ header {
 
 h1 {
     font-size: 70px;
-    background-color: #0000FF;
+    background-color: #183668;
     padding: 20px 20px;
     color: white;
+    text-shadow:
+    -3px -3px 0 #222,
+    3px -3px 0 #222,
+    -3px 3px 0 #222,
+    3px 3px 0 #222,
+    4px 4px 0 #fff,
+    5px 5px 0 #fff,
+    6px 6px 0 #fff,
+    7px 7px 0 #fff;
 }
 
 h2 {
@@ -23,7 +32,7 @@ h2 {
 }
 
 button {
-    background-color: yellow;
+    background-color: #34efa1;
     margin-top: 15px;
     font-size: 20px;
     box-shadow: 3px 3px #888888;

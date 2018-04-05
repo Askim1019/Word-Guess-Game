@@ -153,5 +153,4 @@ $('#btn').on("click", function(){
     $('#wrongLetters').empty();
     $('#picture').empty();
     startGame();
-
 });
